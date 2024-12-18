@@ -416,3 +416,88 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+// Pagination Configuration
+const productsPerPage = 20;
+const products = document.querySelectorAll('#productTable tbody tr');
+const totalPages = Math.ceil(products.length / productsPerPage);
+let currentPage = 1;
+
+// Function to display the current page of products
+function showPage(page) {
+  // Hide all products
+  products.forEach((product, index) => {
+    product.style.display = 'none';
+  });
+
+  // Show products for the current page
+  const startIndex = (page - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
+
+  for (let i = startIndex; i < endIndex && i < products.length; i++) {
+    products[i].style.display = '';
+  }
+
+  // Update the page number display
+  updatePagination();
+}
+
+// Function to update the pagination controls
+function updatePagination() {
+  const paginationList = document.getElementById('paginationList');
+  paginationList.innerHTML = ''; // Clear existing pagination numbers
+
+  // Create page numbers dynamically
+  const maxPagesToShow = 5; // Number of page numbers to show at once (e.g., 1 2 3 4 5)
+  let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+  let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+
+  // Adjust start page if there are fewer pages than maxPagesToShow
+  if (endPage - startPage + 1 < maxPagesToShow) {
+    startPage = Math.max(1, endPage - maxPagesToShow + 1);
+  }
+
+  // Create the page number links
+  for (let i = startPage; i <= endPage; i++) {
+    const pageItem = document.createElement('li');
+    pageItem.classList.add('pagination-item');
+    if (i === currentPage) {
+      pageItem.classList.add('current');
+    }
+
+    const pageLink = document.createElement('a');
+    pageLink.href = '#';
+    pageLink.textContent = i;
+
+    pageLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentPage = i;
+      showPage(currentPage);
+    });
+
+    pageItem.appendChild(pageLink);
+    paginationList.appendChild(pageItem);
+  }
+
+  // Update previous/next button disabled state
+  document.getElementById('prevPageBtn').classList.toggle('disabled', currentPage === 1);
+  document.getElementById('nextPageBtn').classList.toggle('disabled', currentPage === totalPages);
+}
+
+// Event listeners for prev and next buttons
+document.getElementById('prevPageBtn').addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--;
+    showPage(currentPage);
+  }
+});
+
+document.getElementById('nextPageBtn').addEventListener('click', () => {
+  if (currentPage < totalPages) {
+    currentPage++;
+    showPage(currentPage);
+  }
+});
+
+// Initialize the first page and pagination controls
+showPage(currentPage);

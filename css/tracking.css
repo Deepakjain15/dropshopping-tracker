@@ -9,6 +9,7 @@
     --font-color: #E0E0E0; /* Light grey for text on dark backgrounds */
 }
 
+
 /* Global Reset */
 * {
     margin: 0;
@@ -62,8 +63,6 @@ nav {
 }
 
 
-
-
 /* Navigation Links */
 nav ul {
     list-style: none;
@@ -87,6 +86,14 @@ nav ul li a {
 nav ul li a:hover {
     background-color: var(--hover-color); 
     color: #fff;
+}
+
+.dark-mode-btn {
+    background: none;
+    border: none;
+    color: var(--nav-text);
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 /* Contact Button */
@@ -194,6 +201,86 @@ table tr:hover {
     cursor: pointer;
 }
 
+
+/* General Pagination Container */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Pagination Buttons */
+  .pagination-btn {
+    font-size: 20px;
+    color: #4CAF50;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  /* Pagination Buttons Hover and Active State */
+  .pagination-btn:hover {
+    color: #45a049;
+    transform: scale(1.2);
+  }
+  
+  /* Disabled Button */
+  .pagination-btn.disabled {
+    color: #ccc;
+    pointer-events: none;
+  }
+  
+  /* Pagination Number List */
+  .pagination ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0 10px;
+  }
+  
+  /* Individual Page Numbers */
+  .pagination ul li {
+    margin: 0 5px;
+  }
+  
+  .pagination ul li a {
+    color: #4CAF50;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Page Number Hover */
+  .pagination ul li a:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Current Page Style */
+  .pagination ul li.current a {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    .pagination-btn {
+      font-size: 16px;
+    }
+  
+    .pagination ul li a {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+   
+  
 /* Dropdown Graph Container */
 .graph-container {
     height: 250px; /* Slightly bigger height */
