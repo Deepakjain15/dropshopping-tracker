@@ -268,18 +268,6 @@ table tr:hover {
     font-weight: bold;
   }
   
-  /* Responsiveness */
-  @media (max-width: 600px) {
-    .pagination-btn {
-      font-size: 16px;
-    }
-  
-    .pagination ul li a {
-      font-size: 14px;
-      padding: 8px 12px;
-    }
-  }
-   
   
 /* Dropdown Graph Container */
 .graph-container {
@@ -346,111 +334,7 @@ canvas#dropdownGraph {
 }
 
 
-/* Responsive Layout */
-@media screen and (max-width: 768px) {
-    .filters {
-        display: none; /* Hide filters on small screens */
-    }
 
-    .table-container {
-        margin-right: 0;
-    }
-}
-
-/* Responsive Navbar */
-@media screen and (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* Sidebar Filters */
-@media screen and (max-width: 992px) {
-    .filters {
-        position: relative;
-        width: 100%;
-        top: 0;
-        right: 0;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
-
-    .table-container {
-        margin-right: 0;
-    }
-}
-
-/* Mobile view styling for tables */
-@media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    thead {
-        display: none; /* Hide table headers */
-    }
-
-    tr {
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: var(--background-dark);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    td {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        border-bottom: 1px solid #eee;
-        font-size: 14px;
-    }
-
-    td:last-child {
-        border-bottom: none; /* Remove the last border in a card */
-    }
-
-    /* Show the "data-label" as a header for mobile view */
-    td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: var(--font-color);
-        text-transform: capitalize;
-    }
-}
-/* Adjust Graph Container */
-@media screen and (max-width: 768px) {
-    .graph-container {
-        height: 200px; /* Smaller graph height */
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .graph-container {
-        height: 150px;
-    }
-}
-
-/* Calendar and Reset Button Responsiveness */
-@media screen and (max-width: 768px) {
-    #calendar {
-        margin: 5px 0;
-        font-size: 0.9rem;
-    }
-
-    #resetButton {
-        font-size: 0.8rem;
-        padding: 5px 8px;
-    }
-}
 /* Hamburger Menu */
 .hamburger {
     display: none; /* Hidden by default */
@@ -470,33 +354,6 @@ canvas#dropdownGraph {
     transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide the menu by default */
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-color);
-        text-align: center;
-        padding: 10px 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
-
-    nav.active .nav-links {
-        display: flex; /* Show the menu when nav is active */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger icon on smaller screens */
-    }
-
-    nav ul li {
-        margin: 5px 0; /* Spacing for dropdown items */
-    }
-}
 
 /* Position the Filter Button near Product List Heading */
 .filter-button-container {
@@ -640,3 +497,117 @@ canvas#dropdownGraph {
         display: block;
     }
 }
+
+
+
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .pagination-btn {
+      font-size: 16px;
+    }
+  
+    .pagination ul li a {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+   
+  @media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    nav.active .nav-links {
+        display: flex; /* Show the menu when nav is active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Spacing for dropdown items */
+    }
+}
+
+/* Adjust Graph Container */
+@media screen and (max-width: 768px) {
+    .graph-container {
+        height: 400px; /* Smaller graph height */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .graph-container {
+        height: 150px;
+    }
+}
+
+/* Calendar and Reset Button Responsiveness */
+@media screen and (max-width: 768px) {
+    #calendar {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    #resetButton {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+}
+
+
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .filters {
+        display: none; /* Hide filters on small screens */
+    }
+
+    .table-container {
+        margin-right: 0;
+    }
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Sidebar Filters */
+@media screen and (max-width: 992px) {
+    .filters {
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .table-container {
+        margin-right: 0;
+    }
+}
+
+/* Mobile view styling for tables */

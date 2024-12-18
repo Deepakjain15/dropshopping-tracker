@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,18 @@
     <link rel="stylesheet" href="css/tracking.css">
     <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Bootestrap CDN CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-     <!-- Navigation -->
-     <nav>
+    <!-- Navigation -->
+    <nav>
         <div class="nav-container">
             <a href="#" class="logo">TrendyDrops</a>
             <!-- Hamburger Icon -->
@@ -26,352 +35,340 @@
             </ul>
         </div>
     </nav>
-    
 
-<!-- Content Section -->
-<div class="content-container">
-    <div class="table-container">
-        <h1>Product List</h1>
-        <!-- Filter Button for Mobile -->
-        <button class="filter-btn" id="openFilterBtn">Filters</button>
-        <br>
-        <div class="table-responsive">
-            <table id="productTable">
-                <thead>
-                    <tr>
-                        <th>Product ID</th>
-                        <th>Product Name</th>
-                        <th>Product Price ₹</th>
-                        <th>Stock</th>
-                        <th>Collection ID</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr data-id="4">
-                        <td data-label="Product ID">4728907654</td>
-                        <td data-label="Product Name">LED Desk Lamp</td>
-                        <td data-label="Product Price ₹">599.0</td>
-                        <td data-label="Stock">120</td>
-                        <td data-label="Collection ID">7346964182</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="5">
-                        <td data-label="Product ID">5023456789</td>
-                        <td data-label="Product Name">Bluetooth Earbuds</td>
-                        <td data-label="Product Price ₹">1299.0</td>
-                        <td data-label="Stock">85</td>
-                        <td data-label="Collection ID">7346964183</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="6">
-                        <td data-label="Product ID">5829012345</td>
-                        <td data-label="Product Name">Smart Watch</td>
-                        <td data-label="Product Price ₹">2299.0</td>
-                        <td data-label="Stock">45</td>
-                        <td data-label="Collection ID">7346964184</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="7">
-                        <td data-label="Product ID">5532109876</td>
-                        <td data-label="Product Name">Portable Charger</td>
-                        <td data-label="Product Price ₹">899.0</td>
-                        <td data-label="Stock">170</td>
-                        <td data-label="Collection ID">7346964185</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="8">
-                        <td data-label="Product ID">6223456789</td>
-                        <td data-label="Product Name">Wireless Keyboard</td>
-                        <td data-label="Product Price ₹">1290.0</td>
-                        <td data-label="Stock">95</td>
-                        <td data-label="Collection ID">7346964186</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="9">
-                        <td data-label="Product ID">6921456789</td>
-                        <td data-label="Product Name">Gaming Mouse</td>
-                        <td data-label="Product Price ₹">1499.0</td>
-                        <td data-label="Stock">60</td>
-                        <td data-label="Collection ID">7346964187</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="10">
-                        <td data-label="Product ID">6123456790</td>
-                        <td data-label="Product Name">Fitness Tracker</td>
-                        <td data-label="Product Price ₹">1799.0</td>
-                        <td data-label="Stock">130</td>
-                        <td data-label="Collection ID">7346964188</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="11">
-                        <td data-label="Product ID">5823456791</td>
-                        <td data-label="Product Name">Noise Cancelling Headphones</td>
-                        <td data-label="Product Price ₹">3499.0</td>
-                        <td data-label="Stock">75</td>
-                        <td data-label="Collection ID">7346964189</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="12">
-                        <td data-label="Product ID">5423456792</td>
-                        <td data-label="Product Name">Tablet</td>
-                        <td data-label="Product Price ₹">8999.0</td>
-                        <td data-label="Stock">30</td>
-                        <td data-label="Collection ID">7346964190</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="13">
-                        <td data-label="Product ID">5023456793</td>
-                        <td data-label="Product Name">Smart Home Camera</td>
-                        <td data-label="Product Price ₹">2999.0</td>
-                        <td data-label="Stock">50</td>
-                        <td data-label="Collection ID">7346964191</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="14">
-                        <td data-label="Product ID">4723456794</td>
-                        <td data-label="Product Name">Portable Bluetooth Speaker</td>
-                        <td data-label="Product Price ₹">1290.0</td>
-                        <td data-label="Stock">85</td>
-                        <td data-label="Collection ID">7346964192</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="15">
-                        <td data-label="Product ID">4323456795</td>
-                        <td data-label="Product Name">External Hard Drive</td>
-                        <td data-label="Product Price ₹">2990.0</td>
-                        <td data-label="Stock">40</td>
-                        <td data-label="Collection ID">7346964193</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="16">
-                        <td data-label="Product ID">5123456796</td>
-                        <td data-label="Product Name">Laptop Cooling Pad</td>
-                        <td data-label="Product Price ₹">999.0</td>
-                        <td data-label="Stock">120</td>
-                        <td data-label="Collection ID">7346964194</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="17">
-                        <td data-label="Product ID">5723456797</td>
-                        <td data-label="Product Name">Smart TV Box</td>
-                        <td data-label="Product Price ₹">4499.0</td>
-                        <td data-label="Stock">25</td>
-                        <td data-label="Collection ID">7346964195</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="18">
-                        <td data-label="Product ID">5923456798</td>
-                        <td data-label="Product Name">Action Camera</td>
-                        <td data-label="Product Price ₹">6999.0</td>
-                        <td data-label="Stock">65</td>
-                        <td data-label="Collection ID">7346964196</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="19">
-                        <td data-label="Product ID">5523456799</td>
-                        <td data-label="Product Name">Wireless Mouse</td>
-                        <td data-label="Product Price ₹">990.0</td>
-                        <td data-label="Stock">150</td>
-                        <td data-label="Collection ID">7346964197</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="20">
-                        <td data-label="Product ID">5323456800</td>
-                        <td data-label="Product Name">Electric Kettle</td>
-                        <td data-label="Product Price ₹">1790.0</td>
-                        <td data-label="Stock">90</td>
-                        <td data-label="Collection ID">7346964198</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="4">
-                        <td data-label="Product ID">4728907654</td>
-                        <td data-label="Product Name">LED Desk Lamp</td>
-                        <td data-label="Product Price ₹">599.0</td>
-                        <td data-label="Stock">120</td>
-                        <td data-label="Collection ID">7346964182</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="5">
-                        <td data-label="Product ID">5023456789</td>
-                        <td data-label="Product Name">Bluetooth Earbuds</td>
-                        <td data-label="Product Price ₹">1299.0</td>
-                        <td data-label="Stock">85</td>
-                        <td data-label="Collection ID">7346964183</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="6">
-                        <td data-label="Product ID">5829012345</td>
-                        <td data-label="Product Name">Smart Watch</td>
-                        <td data-label="Product Price ₹">2299.0</td>
-                        <td data-label="Stock">45</td>
-                        <td data-label="Collection ID">7346964184</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="7">
-                        <td data-label="Product ID">5532109876</td>
-                        <td data-label="Product Name">Portable Charger</td>
-                        <td data-label="Product Price ₹">899.0</td>
-                        <td data-label="Stock">170</td>
-                        <td data-label="Collection ID">7346964185</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="8">
-                        <td data-label="Product ID">6223456789</td>
-                        <td data-label="Product Name">Wireless Keyboard</td>
-                        <td data-label="Product Price ₹">1290.0</td>
-                        <td data-label="Stock">95</td>
-                        <td data-label="Collection ID">7346964186</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="9">
-                        <td data-label="Product ID">6921456789</td>
-                        <td data-label="Product Name">Gaming Mouse</td>
-                        <td data-label="Product Price ₹">1499.0</td>
-                        <td data-label="Stock">60</td>
-                        <td data-label="Collection ID">7346964187</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="10">
-                        <td data-label="Product ID">6123456790</td>
-                        <td data-label="Product Name">Fitness Tracker</td>
-                        <td data-label="Product Price ₹">1799.0</td>
-                        <td data-label="Stock">130</td>
-                        <td data-label="Collection ID">7346964188</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="11">
-                        <td data-label="Product ID">5823456791</td>
-                        <td data-label="Product Name">Noise Cancelling Headphones</td>
-                        <td data-label="Product Price ₹">3499.0</td>
-                        <td data-label="Stock">75</td>
-                        <td data-label="Collection ID">7346964189</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="12">
-                        <td data-label="Product ID">5423456792</td>
-                        <td data-label="Product Name">Tablet</td>
-                        <td data-label="Product Price ₹">8999.0</td>
-                        <td data-label="Stock">30</td>
-                        <td data-label="Collection ID">7346964190</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="13">
-                        <td data-label="Product ID">5023456793</td>
-                        <td data-label="Product Name">Smart Home Camera</td>
-                        <td data-label="Product Price ₹">2999.0</td>
-                        <td data-label="Stock">50</td>
-                        <td data-label="Collection ID">7346964191</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="14">
-                        <td data-label="Product ID">4723456794</td>
-                        <td data-label="Product Name">Portable Bluetooth Speaker</td>
-                        <td data-label="Product Price ₹">1290.0</td>
-                        <td data-label="Stock">85</td>
-                        <td data-label="Collection ID">7346964192</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="15">
-                        <td data-label="Product ID">4323456795</td>
-                        <td data-label="Product Name">External Hard Drive</td>
-                        <td data-label="Product Price ₹">2990.0</td>
-                        <td data-label="Stock">40</td>
-                        <td data-label="Collection ID">7346964193</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="16">
-                        <td data-label="Product ID">5123456796</td>
-                        <td data-label="Product Name">Laptop Cooling Pad</td>
-                        <td data-label="Product Price ₹">999.0</td>
-                        <td data-label="Stock">120</td>
-                        <td data-label="Collection ID">7346964194</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="17">
-                        <td data-label="Product ID">5723456797</td>
-                        <td data-label="Product Name">Smart TV Box</td>
-                        <td data-label="Product Price ₹">4499.0</td>
-                        <td data-label="Stock">25</td>
-                        <td data-label="Collection ID">7346964195</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="18">
-                        <td data-label="Product ID">5923456798</td>
-                        <td data-label="Product Name">Action Camera</td>
-                        <td data-label="Product Price ₹">6999.0</td>
-                        <td data-label="Stock">65</td>
-                        <td data-label="Collection ID">7346964196</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="19">
-                        <td data-label="Product ID">5523456799</td>
-                        <td data-label="Product Name">Wireless Mouse</td>
-                        <td data-label="Product Price ₹">990.0</td>
-                        <td data-label="Stock">150</td>
-                        <td data-label="Collection ID">7346964197</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    <tr data-id="20">
-                        <td data-label="Product ID">5323456800</td>
-                        <td data-label="Product Name">Electric Kettle</td>
-                        <td data-label="Product Price ₹">1790.0</td>
-                        <td data-label="Stock">90</td>
-                        <td data-label="Collection ID">7346964198</td>
-                        <td data-label="Date">2024-12-15</td>
-                    </tr>
-                    
-                    
-                </tbody>
-            </table>
-        </div>
-        <!-- Pagination Controls -->
-        <div id="paginationControls" class="pagination">
-            <button id="prevPageBtn" class="pagination-btn disabled">&lt;</button>
-            <ul id="paginationList">
-            <!-- Page numbers will be dynamically inserted here -->
-            </ul>
-            <button id="nextPageBtn" class="pagination-btn">&gt;</button>
-        </div>
-    </div>
-</div>
 
-        <!-- Filter Modal -->
-        <div id="filterModal" class="filter-modal">
-            <div class="filter-modal-content">
-                <span class="close-btn" id="closeFilterBtn">&times;</span>
-                <h3>Filters</h3>
+    <!-- Content Section -->
 
-                <!-- Search Products -->
-                <h4>Search Products</h4>
-                <input type="text" placeholder="Search..." id="searchInput">
+    <div class="content-container text-white">
 
-                <!-- Sort Options -->
-                <h4>Sort By</h4>
-                <select id="sortFilter">
-                    <option value="default">Default</option>
-                    <option value="price-low-high">Price: Low to High</option>
-                    <option value="price-high-low">Price: High to Low</option>
-                </select>
+        <div class="table-container">
+            <div id="graphCard" class="graph-card" style="display: none;">
+                <h2>Product Sales Graph</h2>
+                <div class="graph-container">
+                    <canvas id="dropdownGraph"></canvas>
+                </div>
+            </div>
 
-                <!-- Date Filter -->
-                <h4>Filter by Date</h4>
-                <input type="date" id="dateFilter">
+            <h1>Product List</h1>
+            <!-- Filter Button for Mobile -->
+            <button class="filter-btn" id="openFilterBtn">Filters</button>
+            <br>
 
-                <!-- Calendar Placeholder -->
-                <div id="calendar"></div>
+            <div class="table-responsive">
 
-                <!-- Reset Filters Button -->
-                <button id="resetButton" class="reset-btn">Reset Filters</button>
+                <table id="productTable">
+
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Product Price ₹</th>
+                            <th>Stock</th>
+                            <th>Collection ID</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr data-id="4">
+                            <td data-label="Product ID">4728907654</td>
+                            <td data-label="Product Name">LED Desk Lamp</td>
+                            <td data-label="Product Price ₹">599.0</td>
+                            <td data-label="Stock">120</td>
+                            <td data-label="Collection ID">7346964182</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="5">
+                            <td data-label="Product ID">5023456789</td>
+                            <td data-label="Product Name">Bluetooth Earbuds</td>
+                            <td data-label="Product Price ₹">1299.0</td>
+                            <td data-label="Stock">85</td>
+                            <td data-label="Collection ID">7346964183</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="6">
+                            <td data-label="Product ID">5829012345</td>
+                            <td data-label="Product Name">Smart Watch</td>
+                            <td data-label="Product Price ₹">2299.0</td>
+                            <td data-label="Stock">45</td>
+                            <td data-label="Collection ID">7346964184</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="7">
+                            <td data-label="Product ID">5532109876</td>
+                            <td data-label="Product Name">Portable Charger</td>
+                            <td data-label="Product Price ₹">899.0</td>
+                            <td data-label="Stock">170</td>
+                            <td data-label="Collection ID">7346964185</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="8">
+                            <td data-label="Product ID">6223456789</td>
+                            <td data-label="Product Name">Wireless Keyboard</td>
+                            <td data-label="Product Price ₹">1290.0</td>
+                            <td data-label="Stock">95</td>
+                            <td data-label="Collection ID">7346964186</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="9">
+                            <td data-label="Product ID">6921456789</td>
+                            <td data-label="Product Name">Gaming Mouse</td>
+                            <td data-label="Product Price ₹">1499.0</td>
+                            <td data-label="Stock">60</td>
+                            <td data-label="Collection ID">7346964187</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="10">
+                            <td data-label="Product ID">6123456790</td>
+                            <td data-label="Product Name">Fitness Tracker</td>
+                            <td data-label="Product Price ₹">1799.0</td>
+                            <td data-label="Stock">130</td>
+                            <td data-label="Collection ID">7346964188</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="11">
+                            <td data-label="Product ID">5823456791</td>
+                            <td data-label="Product Name">Noise Cancelling Headphones</td>
+                            <td data-label="Product Price ₹">3499.0</td>
+                            <td data-label="Stock">75</td>
+                            <td data-label="Collection ID">7346964189</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="12">
+                            <td data-label="Product ID">5423456792</td>
+                            <td data-label="Product Name">Tablet</td>
+                            <td data-label="Product Price ₹">8999.0</td>
+                            <td data-label="Stock">30</td>
+                            <td data-label="Collection ID">7346964190</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="13">
+                            <td data-label="Product ID">5023456793</td>
+                            <td data-label="Product Name">Smart Home Camera</td>
+                            <td data-label="Product Price ₹">2999.0</td>
+                            <td data-label="Stock">50</td>
+                            <td data-label="Collection ID">7346964191</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="14">
+                            <td data-label="Product ID">4723456794</td>
+                            <td data-label="Product Name">Portable Bluetooth Speaker</td>
+                            <td data-label="Product Price ₹">1290.0</td>
+                            <td data-label="Stock">85</td>
+                            <td data-label="Collection ID">7346964192</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="15">
+                            <td data-label="Product ID">4323456795</td>
+                            <td data-label="Product Name">External Hard Drive</td>
+                            <td data-label="Product Price ₹">2990.0</td>
+                            <td data-label="Stock">40</td>
+                            <td data-label="Collection ID">7346964193</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="16">
+                            <td data-label="Product ID">5123456796</td>
+                            <td data-label="Product Name">Laptop Cooling Pad</td>
+                            <td data-label="Product Price ₹">999.0</td>
+                            <td data-label="Stock">120</td>
+                            <td data-label="Collection ID">7346964194</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="17">
+                            <td data-label="Product ID">5723456797</td>
+                            <td data-label="Product Name">Smart TV Box</td>
+                            <td data-label="Product Price ₹">4499.0</td>
+                            <td data-label="Stock">25</td>
+                            <td data-label="Collection ID">7346964195</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="18">
+                            <td data-label="Product ID">5923456798</td>
+                            <td data-label="Product Name">Action Camera</td>
+                            <td data-label="Product Price ₹">6999.0</td>
+                            <td data-label="Stock">65</td>
+                            <td data-label="Collection ID">7346964196</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="19">
+                            <td data-label="Product ID">5523456799</td>
+                            <td data-label="Product Name">Wireless Mouse</td>
+                            <td data-label="Product Price ₹">990.0</td>
+                            <td data-label="Stock">150</td>
+                            <td data-label="Collection ID">7346964197</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="20">
+                            <td data-label="Product ID">5323456800</td>
+                            <td data-label="Product Name">Electric Kettle</td>
+                            <td data-label="Product Price ₹">1790.0</td>
+                            <td data-label="Stock">90</td>
+                            <td data-label="Collection ID">7346964198</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="4">
+                            <td data-label="Product ID">4728907654</td>
+                            <td data-label="Product Name">LED Desk Lamp</td>
+                            <td data-label="Product Price ₹">599.0</td>
+                            <td data-label="Stock">120</td>
+                            <td data-label="Collection ID">7346964182</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="5">
+                            <td data-label="Product ID">5023456789</td>
+                            <td data-label="Product Name">Bluetooth Earbuds</td>
+                            <td data-label="Product Price ₹">1299.0</td>
+                            <td data-label="Stock">85</td>
+                            <td data-label="Collection ID">7346964183</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="6">
+                            <td data-label="Product ID">5829012345</td>
+                            <td data-label="Product Name">Smart Watch</td>
+                            <td data-label="Product Price ₹">2299.0</td>
+                            <td data-label="Stock">45</td>
+                            <td data-label="Collection ID">7346964184</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="7">
+                            <td data-label="Product ID">5532109876</td>
+                            <td data-label="Product Name">Portable Charger</td>
+                            <td data-label="Product Price ₹">899.0</td>
+                            <td data-label="Stock">170</td>
+                            <td data-label="Collection ID">7346964185</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="8">
+                            <td data-label="Product ID">6223456789</td>
+                            <td data-label="Product Name">Wireless Keyboard</td>
+                            <td data-label="Product Price ₹">1290.0</td>
+                            <td data-label="Stock">95</td>
+                            <td data-label="Collection ID">7346964186</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="9">
+                            <td data-label="Product ID">6921456789</td>
+                            <td data-label="Product Name">Gaming Mouse</td>
+                            <td data-label="Product Price ₹">1499.0</td>
+                            <td data-label="Stock">60</td>
+                            <td data-label="Collection ID">7346964187</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="10">
+                            <td data-label="Product ID">6123456790</td>
+                            <td data-label="Product Name">Fitness Tracker</td>
+                            <td data-label="Product Price ₹">1799.0</td>
+                            <td data-label="Stock">130</td>
+                            <td data-label="Collection ID">7346964188</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="11">
+                            <td data-label="Product ID">5823456791</td>
+                            <td data-label="Product Name">Noise Cancelling Headphones</td>
+                            <td data-label="Product Price ₹">3499.0</td>
+                            <td data-label="Stock">75</td>
+                            <td data-label="Collection ID">7346964189</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="12">
+                            <td data-label="Product ID">5423456792</td>
+                            <td data-label="Product Name">Tablet</td>
+                            <td data-label="Product Price ₹">8999.0</td>
+                            <td data-label="Stock">30</td>
+                            <td data-label="Collection ID">7346964190</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="13">
+                            <td data-label="Product ID">5023456793</td>
+                            <td data-label="Product Name">Smart Home Camera</td>
+                            <td data-label="Product Price ₹">2999.0</td>
+                            <td data-label="Stock">50</td>
+                            <td data-label="Collection ID">7346964191</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="14">
+                            <td data-label="Product ID">4723456794</td>
+                            <td data-label="Product Name">Portable Bluetooth Speaker</td>
+                            <td data-label="Product Price ₹">1290.0</td>
+                            <td data-label="Stock">85</td>
+                            <td data-label="Collection ID">7346964192</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="15">
+                            <td data-label="Product ID">4323456795</td>
+                            <td data-label="Product Name">External Hard Drive</td>
+                            <td data-label="Product Price ₹">2990.0</td>
+                            <td data-label="Stock">40</td>
+                            <td data-label="Collection ID">7346964193</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="16">
+                            <td data-label="Product ID">5123456796</td>
+                            <td data-label="Product Name">Laptop Cooling Pad</td>
+                            <td data-label="Product Price ₹">999.0</td>
+                            <td data-label="Stock">120</td>
+                            <td data-label="Collection ID">7346964194</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="17">
+                            <td data-label="Product ID">5723456797</td>
+                            <td data-label="Product Name">Smart TV Box</td>
+                            <td data-label="Product Price ₹">4499.0</td>
+                            <td data-label="Stock">25</td>
+                            <td data-label="Collection ID">7346964195</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="18">
+                            <td data-label="Product ID">5923456798</td>
+                            <td data-label="Product Name">Action Camera</td>
+                            <td data-label="Product Price ₹">6999.0</td>
+                            <td data-label="Stock">65</td>
+                            <td data-label="Collection ID">7346964196</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="19">
+                            <td data-label="Product ID">5523456799</td>
+                            <td data-label="Product Name">Wireless Mouse</td>
+                            <td data-label="Product Price ₹">990.0</td>
+                            <td data-label="Stock">150</td>
+                            <td data-label="Collection ID">7346964197</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+                        <tr data-id="20">
+                            <td data-label="Product ID">5323456800</td>
+                            <td data-label="Product Name">Electric Kettle</td>
+                            <td data-label="Product Price ₹">1790.0</td>
+                            <td data-label="Stock">90</td>
+                            <td data-label="Collection ID">7346964198</td>
+                            <td data-label="Date">2024-12-15</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- Pagination Controls -->
+            <div id="paginationControls" class="pagination">
+                <button id="prevPageBtn" class="pagination-btn disabled">&lt;</button>
+                <ul id="paginationList">
+                    <!-- Page numbers will be dynamically inserted here -->
+                </ul>
+                <button id="nextPageBtn" class="pagination-btn">&gt;</button>
             </div>
         </div>
+    </div>
 
+    <!-- Filter Modal -->
+    <div id="filterModal" class="filter-modal">
+        <div class="filter-modal-content">
+            <span class="close-btn" id="closeFilterBtn">&times;</span>
+            <h3>Filters</h3>
 
-
-        <aside class="filters">
-            <h3>Search Products</h3>
+            <!-- Search Products -->
+            <h4>Search Products</h4>
             <input type="text" placeholder="Search..." id="searchInput">
 
+            <!-- Sort Options -->
             <h4>Sort By</h4>
             <select id="sortFilter">
                 <option value="default">Default</option>
@@ -379,38 +376,63 @@
                 <option value="price-high-low">Price: High to Low</option>
             </select>
 
+            <!-- Date Filter -->
             <h4>Filter by Date</h4>
-            <div id="calendar"></div>
-            <button id="resetButton">Reset Filters</button>
-            
+            <input type="date" id="dateFilter">
 
-        </aside>
+            <!-- Calendar Placeholder -->
+            <div id="calendar"></div>
+
+            <!-- Reset Filters Button -->
+            <button id="resetButton" class="reset-btn">Reset Filters</button>
+        </div>
     </div>
 
-    
 
 
-    
+    <aside class="filters">
+        <h3>Search Products</h3>
+        <input type="text" placeholder="Search..." id="searchInput">
+
+        <h4>Sort By</h4>
+        <select id="sortFilter">
+            <option value="default">Default</option>
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+        </select>
+
+        <h4>Filter by Date</h4>
+        <div id="calendar"></div>
+        <button id="resetButton">Reset Filters</button>
+
+
+    </aside>
+    </div>
+
+
+
+
+
 
 
     <!-- Flatpickr JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-flatpickr("#calendar", {
-    inline: true, // Makes the calendar always visible
-    defaultDate: "today",
-    onChange: (selectedDates, dateStr) => {
-        filterTableByDate(dateStr);
-    }
-});
+        flatpickr("#calendar", {
+            inline: true, // Makes the calendar always visible
+            defaultDate: "today",
+            onChange: (selectedDates, dateStr) => {
+                filterTableByDate(dateStr);
+            }
+        });
 
-// Function to filter table rows by date
-function filterTableByDate(selectedDate) {
-    document.querySelectorAll("#productTable tbody tr").forEach(row => {
-        const rowDate = row.children[5].textContent.trim();
-        row.style.display = rowDate === selectedDate ? "" : "none";
-    });
-}
+        // Function to filter table rows by date
+        function filterTableByDate(selectedDate) {
+            document.querySelectorAll("#productTable tbody tr").forEach(row => {
+                const rowDate = row.children[5].textContent.trim();
+                row.style.display = rowDate === selectedDate ? "" : "none";
+            });
+        }
     </script>
     <!-- Chart.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -422,4 +444,5 @@ function filterTableByDate(selectedDate) {
         });
     </script>
 </body>
+
 </html>

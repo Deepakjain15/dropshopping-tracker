@@ -265,9 +265,9 @@ function windowResized() {
 // ---------------------------------------------------------------------------------------------------------
 
 const graphData = {
-    1: [10, 15, 20, 25, 30, 35, 40, 42, 45, 50, 55, 60, 65], // Example sales data for product 1
-    2: [5, 10, 15, 10, 5, 20, 25, 30, 35, 20, 15, 10, 5],   // Product 2 sales data
-    3: [30, 25, 20, 15, 10, 5, 10, 15, 20, 25, 30, 35, 40]   // Product 3 sales data
+    4: [10, 15, 20, 25, 30, 35, 40, 42, 45, 50, 55, 60, 65], // Example sales data for product 1
+    5: [5, 10, 15, 10, 5, 20, 25, 30, 35, 20, 15, 10, 5],   // Product 2 sales data
+    6: [30, 25, 20, 15, 10, 5, 10, 15, 20, 25, 30, 35, 40]   // Product 3 sales data
 };
 
 // Time labels: 00:00 to 12:00 with 1-hour intervals
@@ -279,27 +279,32 @@ let chart;
 
 // Toggle dropdown graph
 document.querySelectorAll("#productTable tbody tr").forEach(row => {
+    // row.addEventListener("click", () => {
+    //     if (currentGraphRow && currentGraphRow.previousElementSibling === row) {
+    //         currentGraphRow.remove();
+    //         currentGraphRow = null;
+    //         return;
+    //     }
+
+    //     if (currentGraphRow) currentGraphRow.remove();
+
+    //     currentGraphRow = document.createElement("tr");
+    //     const graphCell = document.createElement("td");
+    //     graphCell.colSpan = 6;
+    //     graphCell.innerHTML = `
+    //         <div class="graph-container">
+    //             <canvas id="dropdownGraph"></canvas>
+    //         </div>
+    //     `;
+    //     currentGraphRow.appendChild(graphCell);
+    //     row.after(currentGraphRow);
+
+    //     renderGraph(row.dataset.id);
     row.addEventListener("click", () => {
-        if (currentGraphRow && currentGraphRow.previousElementSibling === row) {
-            currentGraphRow.remove();
-            currentGraphRow = null;
-            return;
-        }
-
-        if (currentGraphRow) currentGraphRow.remove();
-
-        currentGraphRow = document.createElement("tr");
-        const graphCell = document.createElement("td");
-        graphCell.colSpan = 6;
-        graphCell.innerHTML = `
-            <div class="graph-container">
-                <canvas id="dropdownGraph"></canvas>
-            </div>
-        `;
-        currentGraphRow.appendChild(graphCell);
-        row.after(currentGraphRow);
-
-        renderGraph(row.dataset.id);
+      const productId = row.dataset.id;
+      const graphCard = document.getElementById("graphCard");
+      graphCard.style.display = "block"; // Show the graph card
+      renderGraph(productId);
     });
 });
 
