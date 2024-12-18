@@ -1,0 +1,555 @@
+/* Root Color Variables */
+:root {
+    --primary-color: #1e7b50; /* Green accent color */
+    --hover-color: #27642b; /* Hover bright green */
+    --accent-color: #f1f1f1; /* Light grey text */
+    --background-dark: #121212; /* Dark background */
+    --card-dark: #1e1e1e; /* Slightly lighter dark for cards */
+    --background-light-color: #FFFFFF;
+    --font-color: #E0E0E0; /* Light grey for text on dark backgrounds */
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--font-color);
+    background-color: var(--background-dark);
+    line-height: 1.6;
+}
+
+/* General Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px; /* Adjust height */
+}
+
+/* Logo Styling */
+/* Logo Styling */
+.logo {
+    font-size: 1.8rem; /* Slightly larger logo */
+    color: var(--background-light-color); /* Default color */
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Align vertically */
+    letter-spacing: 1px; /* Improve spacing */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.logo:hover {
+    color: var(--hover-color); 
+}
+
+
+
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increased spacing */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-color); 
+    color: #fff;
+}
+
+/* Contact Button */
+.contact-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid var(--hover-color); 
+    border-radius: 50px; 
+    color: var(--hover-color);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background-color: var(--hover-color); 
+    color: var(--primary-color); 
+}
+
+/* Layout Adjustment */
+.content-container {
+    display: flex;
+    margin: 90px auto 0;
+    padding: 0;
+    max-width: 100%; 
+    gap: 0;
+}
+
+/* Sidebar Filter Fixed to the Right */
+.filters {
+    position: fixed;
+    top: 90px; /* Below navbar */
+    right: 0;
+    width: 350px; 
+    height: auto; 
+    background-color: var(--background-dark);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.filters h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--hover-color);
+    padding-bottom: 8px;
+}
+
+.filters h4 {
+    margin: 15px 0 5px;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.filters input,
+.filters select {
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: var(--font-color);
+    width: 100%;
+}
+
+/* Table Container */
+.table-container {
+    flex-grow: 1; 
+    margin-right: 350px; /* Space for fixed sidebar */
+    margin-left: 5px;
+    padding: 20px;
+    background-color: var(--background-dark);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--hover-color);
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: var(--background-light-color);
+    font-size: 1em;
+}
+
+table tr:hover {
+    background-color: var(--hover-color);
+    color: var(--background-light-color);
+    cursor: pointer;
+}
+
+/* Dropdown Graph Container */
+.graph-container {
+    height: 250px; /* Slightly bigger height */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Graph Row */
+table tr.graph-row td {
+    padding: 0;
+    background-color: #fff;
+    border: none;
+}
+
+canvas#dropdownGraph {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Filters */
+.filters input,
+.filters select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Calendar Container */
+#calendar {
+    padding: 8px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #fff; /* White background */
+    margin-top: 10px; /* Top margin */
+    margin-bottom: 15px; /* Bottom spacing */
+}
+
+/* Reset Button */
+#resetButton {
+    display: inline-block;
+    margin-top: 10px; /* Top margin */
+    padding: 6px 10px; /* Minimal padding */
+    background-color: var(--primary-color); /* Theme teal color */
+    color: #fff; /* White text */
+    font-size: 0.9rem; /* Small font size */
+    border: none; /* Remove borders */
+    border-radius: 3px; /* Small rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.2s ease-in-out; /* Smooth hover */
+}
+
+#resetButton:hover {
+    background-color: var(--hover-color); /* Gold hover color */
+    color: #333; /* Dark text for contrast */
+}
+
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .filters {
+        display: none; /* Hide filters on small screens */
+    }
+
+    .table-container {
+        margin-right: 0;
+    }
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Sidebar Filters */
+@media screen and (max-width: 992px) {
+    .filters {
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .table-container {
+        margin-right: 0;
+    }
+}
+
+/* Mobile view styling for tables */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none; /* Hide table headers */
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: var(--background-dark);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+    }
+
+    td:last-child {
+        border-bottom: none; /* Remove the last border in a card */
+    }
+
+    /* Show the "data-label" as a header for mobile view */
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--font-color);
+        text-transform: capitalize;
+    }
+}
+/* Adjust Graph Container */
+@media screen and (max-width: 768px) {
+    .graph-container {
+        height: 200px; /* Smaller graph height */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .graph-container {
+        height: 150px;
+    }
+}
+
+/* Calendar and Reset Button Responsiveness */
+@media screen and (max-width: 768px) {
+    #calendar {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    #resetButton {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--background-light-color);
+    transition: color 0.3s ease;
+}
+
+.hamburger-active {
+    color: var(--hover-color); /* Color change when active */
+}
+
+.nav-links {
+    display: flex; /* Default for larger screens */
+    gap: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    nav.active .nav-links {
+        display: flex; /* Show the menu when nav is active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Spacing for dropdown items */
+    }
+}
+
+/* Position the Filter Button near Product List Heading */
+.filter-button-container {
+    display: none; /* Hidden by default */
+    position: relative;
+    text-align: right; /* Align button to the right */
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.filter-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: var(--background-light-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+
+/* Filter Button */
+.filter-btn {
+    background-color: #007b8f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Modal */
+.filter-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.filter-modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow-y: auto; /* Scrollable content */
+}
+
+.filter-modal-content h4 {
+    margin: 15px 0 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.filter-modal-content input,
+.filter-modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reset-btn {
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+
+/* Hide the mobile date filter by default */
+#filterByDate {
+    display: none;
+}
+
+/* Show only on mobile screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #filterByDate {
+        display: block;
+    }
+
+    /* Hide the other Date Filter */
+    #dateFilter {
+        display: none;
+    }
+}
+
+/* Responsive Chart Container for Mobile View */
+@media screen and (max-width: 768px) {
+    .graph-container {
+        width: 100%; /* Full width of the screen */
+        padding: 10px; /* Add padding for spacing */
+        margin: 10px auto; /* Center the chart */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .graph-container canvas {
+        width: 100% !important; /* Ensure the chart fills the container */
+        height: 250px !important; /* Set a minimum height for better visibility */
+    }
+}
+
+/* Default: Hide the Filter button on larger screens */
+#openFilterBtn {
+    display: none;
+}
+
+/* Show the Filter button only in mobile view */
+@media screen and (max-width: 768px) {
+    #openFilterBtn {
+        display: block;
+    }
+}
